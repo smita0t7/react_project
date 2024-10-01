@@ -1,0 +1,108 @@
+.person-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .add-person-form, .edit-person-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-add {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn-add:hover {
+    background-color: #45a049;
+  }
+  
+  .person-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .person-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .person-info {
+    flex: 1;
+  }
+  
+  .person-actions {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .btn-edit {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background-color: #0b7dda;
+  }
+  
+  .btn-delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #da190b;
+  }
+  
+  .btn-update {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .btn-update:hover {
+    background-color: #e68a00;
+  }
+  
+  .btn-cancel {
+    background-color: #607d8b;
+    color: white;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #455a64;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
