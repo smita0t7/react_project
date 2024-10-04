@@ -1,0 +1,60 @@
+.person-list{
+    display: flex;
+    flex-duration: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.person-list h1{
+    margin-bottom: 20px;
+}
+
+.add-person-button{
+    margin-bottom: 20px;
+}
+
+tabe{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align:left;
+}
+
+th{
+    background-color: #f2f2f2;
+}
+
+.person-name{
+    text-decoration: none;
+    color: #007bff;
+}
+
+.person-name:hover{
+
+    text-decoration: underline;
+}
+
+@media (max-width: 768px){
+    table{
+        font-size: 14px
+    }
+
+    th,td{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 400px){
+    table{
+        font-size: 12px;
+    }
+
+    th,td{
+        padding: 3px;
+    }
+}
