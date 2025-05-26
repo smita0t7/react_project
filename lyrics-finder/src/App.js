@@ -9,28 +9,41 @@ function App() {
 
     function searchLyrics() {
         if (artist === "" || song === "") {
+            alert("Please fill in both fields 🎤🎵");
             return;
         }
-        Axios.get(
-`https://api.lyrics.ovh/v1/${artist}/${song}`).then(res => {
-            console.log(res.data.lyrics);
-            setLyrics(res.data.lyrics);
-        })
+
+        Axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`)
+            .then(res => {
+                setLyrics(res.data.lyrics);
+            })
+            .catch(err => {
+                setLyrics("Sorry, lyrics not found 😢");
+            });
     }
 
     return (
         <div className="App">
-            <h1>Lyrics Finder ????</h1>
+            <h1>🎶 Lyrics Finder 🎶</h1>
 
-            <input className="inp" type="text" 
+            <input
+                className="inp"
+                type="text"
                 placeholder='Artist name'
-                onChange={(e) => { setArtist(e.target.value) }} />
-            <input className="inp" type="text" 
+                onChange={(e) => setArtist(e.target.value)}
+            />
+
+            <input
+                className="inp"
+                type="text"
                 placeholder='Song name'
-                onChange={(e) => { setSong(e.target.value) }} />
-            <button className="btn" 
-                onClick={() => searchLyrics()}>
-                    ???? Search</button>
+                onChange={(e) => setSong(e.target.value)}
+            />
+
+            <button className="btn" onClick={searchLyrics}>
+                Search
+            </button>
+
             <hr />
             <pre>{lyrics}</pre>
         </div>

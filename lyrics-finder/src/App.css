@@ -1,36 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    font-family: "Montserrat", sans-serif;
+}
+
 .App {
     min-height: 100vh;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
     text-align: center;
-    font-family: "Montserrat", sans-serif;
 }
 
 h1 {
     font-family: "Fredoka One", cursive;
-    color: #ff7a8a;
-}
-
-pre {
-    font-size: 24px;
-    color: #113a5d;
-}
-
-hr {
-    margin-top: 20px;
-    width: 60%;
+    color: #ff5f7e;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
 .inp {
-    width: 200px;
-    height: 40px;
-    border: 2px solid #113a5d;
-    margin: 0px 10px;
-    padding-left: 6px;
-    font-size: 22px;
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 0 20px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.inp:focus {
+    outline: none;
+    transform: scale(1.05);
+    border: 2px solid #ff5f7e;
 }
 
 .btn {
-    width: 90px;
-    height: 40px;
+    width: 120px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background-color: #113a5d;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #145d85;
+    transform: scale(1.05);
+}
+
+pre {
+    font-size: 18px;
+    color: #113a5d;
+    background-color: #ffffffd2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+hr {
+    margin: 30px 0;
+    width: 60%;
+    border: none;
+    border-top: 2px dashed #ccc;
 }
